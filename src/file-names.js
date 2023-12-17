@@ -30,12 +30,8 @@ function renameFiles( names) {
       files.push(name);
     }
   })
-  // console.log(names);
-  // console.log(files);
   return files
 }
-
-// renameFiles(['doc', 'doc', 'image', 'doc(1)', 'doc'])
 
 module.exports = {
   renameFiles

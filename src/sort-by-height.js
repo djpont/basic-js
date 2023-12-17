@@ -12,13 +12,10 @@ const { NotImplementedError } = require('../extensions/index.js');
  * The result should be [-1, 150, 160, 170, -1, -1, 180, 190]
  */
 function sortByHeight(arr) {
-  // Create an array of heights excluding -1
   const heights = arr.filter(height => height !== -1);
-  
-  // Sort the heights array
+
   heights.sort((a, b) => a - b);
-  
-  // Replace the sorted heights back into the original array at the correct positions
+
   let index = 0;
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] !== -1) {
@@ -26,7 +23,7 @@ function sortByHeight(arr) {
       index++;
     }
   }
-  
+
   return arr;
 }
 

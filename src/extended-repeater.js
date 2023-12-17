@@ -29,31 +29,6 @@ function repeater(str, options) {
       .join(options.separator || "+");
 }
 
-// function repeater(rawStr, options) {
-//   const str = rawStr.toString();
-//   const repeatTimes = Number(options.repeatTimes || 1);
-//   const separator = options.separator?.toString() || '+';
-//   const addition = options.addition?.toString() || '|';
-//   const additionRepeatTimes = Number(options.additionRepeatTimes || ((addition === '|') ? 0 : 1));
-//   const additionSeparator = options.additionSeparator?.toString() || '';
-//   let repeatStr = str;
-//   let finalStr = '';
-//   for(let i=1; i <= repeatTimes; i++){
-//     finalStr+=repeatStr;
-//     for(let a=1; a<=additionRepeatTimes; a++){
-//       finalStr+=addition;
-//       if(a<additionRepeatTimes) finalStr+=additionSeparator;
-//     }
-//     if( i < repeatTimes) {finalStr+=separator;}
-//   }
-//   return finalStr;
-// }
-
-// console.log('repeater')
-// repeater('TESTstr', { separator: 'ds', addition: 'ADD!', additionSeparator: ')))000' });
-// repeater('la', { repeatTimes: 3, separator: 's', addition: '+', additionRepeatTimes: 1 })
-// repeater(9.234, { repeatTimes: 4, separator: '||', addition: { a: 5 }, additionRepeatTimes: 3, additionSeparator: '&&' })
-
 module.exports = {
   repeater
 };
